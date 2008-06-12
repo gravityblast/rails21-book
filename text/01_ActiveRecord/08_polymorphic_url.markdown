@@ -1,10 +1,10 @@
-## Polymorphic url
+## Url polimorfiche
 
-Helper methods for polymorphic URL are used as a more elegant solution to renamed routes when you're working with **ActiveRecord**.
-                                    
-These methods come in handy when you want to generate the URL for a **RESTful** resource without specifying the type it is going to be associated with.
-                                      
-It is very simple to work with them. Take a look at a few examples (commented out is how the same thing is done in versions of Rails prior to 2.1):                             
+I metodi helper per le URL polimorfiche sono utilizzati come una soluzione più elegante rispetto ai "renamed routes" quando lavorate con **ActiveRecord**.
+
+Questi metodi diventano utili quando volete generare l'URL per una risorsa **RESTful** senza specificare il tipo con la quale la risorsa stessa viene associata.
+
+E' molto semplice lavorare con essi. Date un'occhiata ai pochi esempi (nei commenti viene presentato come realizzare la stessa cosa in versioni di Rails antecedenti la 2.1):                                    
 
 	record = Article.find(:first) 
 	polymorphic_url(record) #-> article_url(record)
@@ -15,14 +15,15 @@ It is very simple to work with them. Take a look at a few examples (commented ou
 	# it can also identify recently created elements
 	record = Comment.new
 	polymorphic_url(record)  #->  comments_url()
-	                  
-Notice how the **polymorphic_url** method is able to identify the type that is given to him and generates the correct routes. **Nested resources** and **namespaces** are also supported:
+
+Notate come il metodo **polymorphic_url** sia capace di identificare il tipo che gli viene passato e generare di conseguenza il route corretto. Sono anche supportate le **nested resources** e i **namespaces**:
 
 	polymorphic_url([:admin, @article, @comment])
 	#-> this will return:
 	admin_article_comment_url(@article, @comment)
-	           
-You can also use prefixes such as **new**, **edit** and **formatted**. Take a look at a few examples:
+
+
+Potete anche utilizzare prefissi come **new**, **edit** and **formatted**. Date un'occhiata ai seguenti esempi:
 
 	edit_polymorphic_path(@post)
 	#=> /posts/1/edit

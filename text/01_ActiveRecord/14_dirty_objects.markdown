@@ -1,7 +1,7 @@
-## Dirty Objects
-                  
-Now in Rails we are able to keep track of changes made to **ActiveRecord**. It is possible to know if an object has been changed or not. In case it has been changed, we can track down its latest changes. Let's take look at a few examples:
+## Oggetti "sporchi"
 
+Ora in Rails abbiamo la possibilità di tenere traccia dei cambiamenti effettuati ad un oggetto **ActiveRecord**. E' possibile sapere se un oggetto è stato modificato o meno. Nel caso in cui sia stato modificato, possiamo rintracciare i suoi ultimi cambiamenti. Date un'occhiata ai seguenti esempi:
+                  
   article = Article.find(:first)
 	article.changed?  #=> false
 
@@ -15,7 +15,7 @@ Now in Rails we are able to keep track of changes made to **ActiveRecord**. It i
 	# before and after the change
 	article.title_change  #=> ["Title", "New Title"]
 
-As you can see it is very simple. You can also list all changes made to the object in one of two ways:
+Come potete vedere è molto semplice. Potete anche ottenere una lista di tutti i cambiamenti effettuati sull'oggetto con uno dei seguenti metodi:
 
 	# returns a list with all of the attributes that were changed
 	article.changed  #=> ['title']
@@ -23,14 +23,15 @@ As you can see it is very simple. You can also list all changes made to the obje
 	# returns a hash with attributes that were changed 
 	# along with its values before and after
 	article.changes  #=> { 'title’ => ["Title", "New Title"] }
-             
-Notice that when an object is saved, its status changes:
+
+
+Notate che quando un oggetto viene salvato il suo stato cambia:             
 
 	article.changed?  #=> true
 	article.save  #=> true
 	article.changed?  #=> false
-   
-In case you want to change an object's state without using **attr=**, you will need to explicitly inform that the attribute was changed by using the method **attr\_name\_will\_change!** (replace **attr** with an object's real attribute). Let's look at one last example:
+
+Nel caso in cui vogliate modificare lo stato di un oggetto senza utilizzare **attr=**, avrete bisogno di indicare esplicitamente che l'attributo verrà  cambiato utilizzando il metodo **attr\_name\_will\_change!** (sostituire **attr** con l'attributo reale dell'oggetto). Date un'occhiata ai seguenti esempi:
     
 	article = Article.find(:first)
 	article.title_will_change!

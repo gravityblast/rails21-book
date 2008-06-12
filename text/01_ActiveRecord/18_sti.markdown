@@ -1,6 +1,6 @@
-## Storing the complete name of a class when using STI
+## Salvare il nome completo di una classe quando si usa STI
 
-Whenever we use **models** with **namespace** and **STI**, **ActiveRecord** stores just the name of the class, without its **namespace** (*demodulized*). This will only work when all of the classes in the **STI** are in the same **namespace**. Let's look at an example:
+Quando utilizziamo **modelli** con **namespace** e **STI**, **ActiveRecord** salva solo il nome della classe, senza i suoi **namespace** (*demodulized*). Questo funziona solo quando tutte le class in **STI** sono nel medesimo **namespace**. Osserviamo l'esempio:
 
 	class CollectionItem < ActiveRecord::Base; end
 	class ComicCollection::Item < CollectionItem; end
@@ -11,11 +11,11 @@ Whenever we use **models** with **namespace** and **STI**, **ActiveRecord** stor
 	item2 = CollectionItem.find(item.id)
 	# returns an error, because it can't find
 	# the class Item
-      
-This change adds a new option that makes **ActiveRecord** store the whole name of the class 
 
-To enable/disable this feature, you should include or edit the following in your **environment.rb**.
+Questa modifica aggiunge una nuova opzione che permette ad **ActiveRecord** di salvare l'intero nome della classe.
+
+Per abilitare/disablitare questa feature dovete modificare il file **environment.rb**, affinché abbia:
 
 	ActiveRecord::Base.store_full_sti_class = true
-                             
-Its default value is true.
+
+Il suo valore di default è true.

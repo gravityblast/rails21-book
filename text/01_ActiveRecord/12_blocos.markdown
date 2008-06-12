@@ -1,13 +1,13 @@
-## ActiveRecord::Base.create accepts blocks
+## ActiveRecord::Base.create accetta i blocchi
 
-We are already used to **ActiveRecord::Base.new** accepting blocks. Now we can do the same thing in the **create** method:
+Abbiamo già utilizzato i blocchi con il metodo **ActiveRecord::Base.new**. Adesso possiamo fare la stessa cosa con il metodo **create**:
 
 	# Creating an object and passing it a block describing its attributes
 	User.create(:first_name => 'Jamie') do |u|
 	  u.is_admin = false
 	end
 
-We can also use the same method to create many objects at once:
+Possiamo anche utilizzare lo stesso metodo per creare più oggetti in una volta sola:
 
 	# Creating an array of new objects using a block.
 	# The block is executed once for each of object that is created.
@@ -15,11 +15,11 @@ We can also use the same method to create many objects at once:
 	  u.is_admin = false
 	end
 
-And it also works with associations:
+E funziona anche con le associazioni:
 
 	author.posts.create!(:title => "New on Edge") {|p| p.body = "More cool stuff!"}
 
-	# ou
+	# or
 
 	author.posts.create!(:title => "New on Edge") do |p|
 	  p.body = "More cool stuff!"

@@ -1,6 +1,6 @@
 ## Calculations 
                          
-**ActiveRecord::Calculations** has changed a bit to support table names. This comes in handy when we have relationships among different tables with the same column name. You have these two options now:
+**ActiveRecord::Calculations** ha subìto lievi modifiche per supportare i nomi delle tabelle. Ciò torna utile quando avete relazioni tra tabelle differenti ma con nomi di colonna identici. Ora avete a disposizione queste due opzioni:
 
 	authors.categories.maximum(:id)
 	authors.categories.maximum("categories.id")

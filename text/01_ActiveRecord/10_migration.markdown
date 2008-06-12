@@ -1,6 +1,6 @@
-## Methods add\_timestamps and remove\_timestamps       
-  
-We now have two new methods: **add\_timestamps** and **remove\_timestamps**. They add and remove, respectively, **timestamp** columns. Let's take a look at an example:
+## Metodi add\_timestamps e remove\_timestamps       
+
+Adesso disponiamo di due nuovi metodi: **add\_timestamps** e **remove\_timestamps**. Essi aggiungono e rimuovono, rispettivamente, colonne **timestamp**. Date un'occhiata al seguente esempio:
 
 	def self.up
 	  add_timestamps :feeds

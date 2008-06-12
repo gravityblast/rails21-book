@@ -1,6 +1,6 @@
-## Method table_exists?
-           
-New method for the **AbstractAdapter** class: **table\_exists**. It is very simple to use:
+## Metodo table_exists?
+
+Nuovo metodo per la classe **AbstractAdapter**: **table\_exists**. E' molto semplice da utilizzare:
 
 	>> ActiveRecord::Base.connection.table_exists?("users")
 	=> true

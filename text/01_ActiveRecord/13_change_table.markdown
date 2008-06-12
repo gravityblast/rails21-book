@@ -1,8 +1,8 @@
 ## change\_table
-        
-The creation of **migrations** in Rails 2.0 was a lot sexier than on previous verions, but to alter a table using **migrations** was not sexy at all.
 
-In Rails 2.1, alter table became also sexy with the new method **change\_table**. Let's take a look at an example:
+La creazione di **migrations** in Rails 2.0 era stata migliorata rispetto alle precedenti versioni, ma modificare una tabella utilizzando le **migrations** non era poi così comodo.
+
+In Rails 2.1 modificare una tabella è diventato più semplice grazie al metodo **change\_table**. Date un'occhiata ai seguenti esempi:
 
 	change_table :videos do |t|
 	  t.timestamps # this adds columns created_at and updated_at
@@ -10,8 +10,8 @@ In Rails 2.1, alter table became also sexy with the new method **change\_table**
 	  t.string :name, :email, :limit => 20 # this adds columns name and email
 	  t.remove :name, :email # this removes columns name and email
 	end
-              
-The new method **change\_table** works just like his cousin **create\_table** but instead of creating a new table it just alters an already existing table by adding or removing columns and indexes.
+
+Il nuovo metodo **change\_table** funziona in modo simile al "cugino" **create\_table** ma anziché creare una nuova tabella, semplicemente modifica una tabella esistente aggiungendo o rimuovendo colonne ed indici.
 
 	change_table :table do |t|
 	  t.column # adds an ordinary column. Ex: t.column(:name, :string)

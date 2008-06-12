@@ -1,15 +1,15 @@
-## The **sum** method
+## Il metodo **sum**
 
-### Expressions in the **sum** method
-            
-Now we can use expressions in **ActiveRecord** methods that deal with calculation, like **sum**, for example:
+### Espressioni nel metodo **sum**
+
+Ora possiamo utilizzare espressioni nei metodi **ActiveRecord** che hanno a che fare con i calcoli, come **sum**, per esempio:
 
 	Person.sum("2 * age")
 
-### Change in the default return value of the sum method
+### Modifiche nel valore di ritorno di default del metodo sum
 
-On previous versions, when we used **ActiveRecord**'s **sum** method to calculate the addition of all rows in a table and no row matched the conditions expressed during the method invocation, then the default return value would be **nil**.
+Nelle precedenti versioni, quando utilizzavamo il metodo **sum** di **ActiveRecord** per calcolare la somma di tutte le righe di una tabella e nessuna riga soddisfava le condizioni espresse durante la chiamata del metodo, il valore di ritorno di default era **nil**.
 
-In Rails 2.1 the default return value (that is when no row is found) is 0. See the example:
+In Rails 2.1 il valore di ritorno di default (cioé quando non viene trovata nessuna riga) è 0. Si veda l'esempio:
 
 	Account.sum(:balance, :conditions => '1 = 2') #=> 0

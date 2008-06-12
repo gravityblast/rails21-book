@@ -1,11 +1,12 @@
 ##Eager Loading
 
-To explain this new funcionality, let's look at the following code:
+Per illustrare questa nuova funzionalità osserviamo il seguente codice:
 
 	Author.find(:all, :include => [:posts, :comments])
-	
-I'm searching through table **authors** and also including tables **posts** and **comments** in my query through the **author_id** column, which is the default column name according to Rails' convention for foreign_key names. 
-This search used to generate SQL queries like this:
+
+Sto cercando attraverso la tabella **authors** includendo anche le tabelle **posts** e **commenti** nella mia query attraverso la colonna **author\_id**, la quale è il nome di default in accordo con le convenzioni di Rails per i nomi delle foreing\_key.
+
+La query risultante è simile alla seguente:	
 
 	SELECT
 	  authors."id"          AS t0_r0,
@@ -24,12 +25,12 @@ This search used to generate SQL queries like this:
 	  LEFT OUTER JOIN posts ON posts.author_id = authors.id
 	  LEFT OUTER JOIN comments ON comments.author_id = authors.id
 
-Exactly one long SQL query with **joins** between tables **authors**, **posts** and **comments**. We call this **cartesian product**.	
+Esattamente una lunga query SQL con **joins** tra le tabelle **authors**, **posts** e **comments**. Questo si chiama un **prodotto cartesiano**.
 
-This type of query is not always good performance-wise, so it was changed for Rails 2.1. The same query for **Author** class now uses a different approach to retrieve information from all three tables. Instead of using one SQL query with all three tables, Rails now uses three different queries - one for each table - which are shorter queries than the former that used to be generated. The result can be seen in the log after executing the previous ruby on rails code:
+Questo tipo di query non sempre esprime delle buone performance, per questo è stata cambiata in ails 2.1. La stessa query per la class **Author** ora utilizza un approccio diverso per recuperare le informazioni da tutte e tre le tabelle. Anziché usare una query SQL con le tre tabelle, ora Rails usa tre query distinte - una per ogni tabella - le quali sono più corte rispetto alla soluzione precedente. Il risultato può essere visto nel log dopo aver eseguito il precedente codice ruby on rails:
 
 	SELECT * FROM "authors"
 	SELECT posts.* FROM "posts" WHERE (posts.author_id IN (1))
 	SELECT comments.* FROM "comments" WHERE (comments.author_id IN (1))
 
-In **most cases** three simpler queries will run faster than a complex and long query.
+In **molti casi** tre query semplici vengono eseguite più velocemente rispetto ad un'unica lunga query.
