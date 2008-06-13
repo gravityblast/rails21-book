@@ -1,3 +1,3 @@
 ## Prototype
 
-Rails 2.1 now uses Prototype version 1.6.0.1. It serves as a preparatory to version 1.8.1 of script.aculo.us.
+Rails 2.1 usa ora la versione 1.6.0.1 di Prototype. E' designato per la versione 1.8 di script.aculo.us

@@ -1,4 +1,4 @@
-#Introduction
+#Introduzione
 
 Around July of 2004 David Heinemeier Hansson publicly released the Ruby on Rails framework, which had been extracted from a web application called Basecamp. More than three years later, on the December 7th, 2007 Ruby on Rails version 2.0 was released with numerous important changes.
 
@@ -25,26 +25,32 @@ To Daniel Lopes who made the beautiful cover for this edition.
 
 To all of the Ruby on Rails Brazilian community that helped directly or indirectly with this book, commenting on blog posts and giving suggestions. It's like I always say, the best of Rails is its community! Keep creating, inventing, and specially sharing.
 
-## Translators
+## Traduttori
 
-This book was proudly translated to english by these Brazilian guys:
+Questo testo è stato tradotto in italiano dalla comunità Ruby:
 
-**Pedro Pimentel** - [http://www.pedropimentel.com](http://www.pedropimentel.com)
+**Carlo Pecchia** - [http://carlopecchia.eu](http://carlopecchia.ru)
 
-Chapters 3-8 and 10-13
+Capitoli 2
 
-**Rafael Barbosa** - [http://www.act-as-newbie.com](http://www.act-as-newbie.com/)
+**Ali Panick** - []()
 
-Introduction and chapter 1
+Capitoli 10-12
 
-**Ricardo S Yasuda** - [http://blog.shadowmaru.org](http://blog.shadowmaru.org/)
+**Piero Bozzolo** - []()
 
-Chapter 14
+Capitolo 5
 
-**Caike Souza** - [http://tech-death.blogspot.com](http://tech-death.blogspot.com/)
+**Oscar Del Ben** - []()
 
-Chapter 2
+Capitolo 8
 
-**Abraão Coelho** - [http://abrcoelho.net](http://abrcoelho.net/)
+**Andrea Reginato** - []()
 
-Chapter 9
+Capitolo 13
+
+**Carmine Moleti** - []()
+
+Capitolo 14
+
+Si ringrazia inoltre, per il supporto e le revisioni: TBD
