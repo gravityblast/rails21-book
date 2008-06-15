@@ -8,7 +8,7 @@ Secondo David le principali novità di questa version riguardano:
 
 * Timezones
 * Dirty tracking
-* Dipendenza delle gem
+* Dipendenze fra le gem
 * Named scope
 * Migrations basate sul tempo (UTC)
 * Caching migliorato
