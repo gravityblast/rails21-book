@@ -1,6 +1,6 @@
 ## Salvare il nome completo di una classe quando si usa STI
 
-Quando utilizziamo **modelli** con **namespace** e **STI**, **ActiveRecord** salva solo il nome della classe, senza i suoi **namespace** (*demodulized*). Questo funziona solo quando tutte le class in **STI** sono nel medesimo **namespace**. Osserviamo l'esempio:
+Quando utilizziamo **modelli** con **namespace** e **STI**, **ActiveRecord** salva solo il nome della classe, senza i suoi **namespace** (*demodulized*). Questo funziona solo quando tutte le classi in **STI** sono nel medesimo **namespace**. Osserviamo l'esempio:
 
 	class CollectionItem < ActiveRecord::Base; end
 	class ComicCollection::Item < CollectionItem; end

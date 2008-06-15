@@ -1,4 +1,6 @@
 desc 'Cria um arquivo pdf à partir do html gerado'
+desc 'Genera un file pdf a partire dall\'html generato'
+
 task :pdf => :html do
   prince = Prince.new()
   html_string = File.new("output/index.html").read

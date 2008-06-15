@@ -15,7 +15,7 @@ Il metodo **has\_one** adesso dispone dell'opzione **through**. Funziona esattam
 
 	class User < ActiveRecord::Base
 	  has_many :subscriptions
-	  has_one :magazine, :through => : subscriptions, 
+	  has_one :magazine, :through => :subscriptions, 
 		        :conditions => ['subscriptions.active = ?', true]
 	end
 	
@@ -49,7 +49,7 @@ Ciò, comunque, non funziona. Osservate cosa succedere quando cerco di recuperar
 	# ArgumentError: /…/active_support/core_ext/hash/keys.rb:48:
 	# in `assert_valid_keys’: Unknown key(s): polymorphic 
 
-Per fare in modo che funzioni dobbiamo usare **:source_type**. Modifichiamo la nostra clase **Client**:
+Per fare in modo che funzioni dobbiamo usare **:source_type**. Modifichiamo la nostra classe **Client**:
                        
 	class Client < ActiveRecord::Base
 	  has_many :people_contacts,

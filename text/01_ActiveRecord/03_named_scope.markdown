@@ -1,6 +1,6 @@
 ## Named_scope
               
-La gemma *has\_finder* è stata agiunta a Rails con un nome differente: **named\_scope**.
+La gemma *has\_finder* è stata aggiunta a Rails con un nome differente: **named\_scope**.
 
 Per comprendere pienamente cosa porta a Rails questa aggiunta osserviamo gli esempi seguenti:
 
@@ -14,7 +14,7 @@ Per comprendere pienamente cosa porta a Rails questa aggiunta osserviamo gli ese
 	Article.containing_the_letter_a.find(:first)
 	Article.containing_the_letter_a.find(:all, :conditions => {…})
 
-Anziché create un nuovo metodo **published** che restituisca tutti i post pubblicati, utilizzo un **named\_scope** che lo faccia per me. Ma fa ben più di questo. Osserviamo un ulteriore esempio su come possa essere utilizzato:
+Anziché creare un nuovo metodo **published** che restituisca tutti i post pubblicati, utilizzo un **named\_scope** che lo faccia per me. Ma fa ben più di questo. Osserviamo un ulteriore esempio su come possa essere utilizzato:
  
 	named_scope :written_before, lambda { |time|
 	  { :conditions => ['written_on < ?', time] }
@@ -33,7 +33,7 @@ Anziché create un nuovo metodo **published** che restituisca tutti i post pubbl
 
 ## Testare named\_scope con proxy\_options 
 
-I **named scopes** sono una nuova feature molto interessante per Rails 2.1, ma dopo averli usati per un po' potreste avere tempi duri per scrivere dei test in contesti più complessi.
+I **named scopes** sono una nuova feature molto interessante per Rails 2.1, ma dopo averli usati per un po' potreste avere difficoltà scrivendo dei test in contesti più complessi.
 
 Osserviamo un esempio:                                                                                 
 
@@ -43,7 +43,7 @@ Osserviamo un esempio:
 		  }
 		end
 
-Come scriviamo un test che valida la geneazione dello scope ?
+Come scriviamo un test che valida la corretta generazione dello scope ?
 
 Per risolvere questo problema è stato introdotto il metodo **proxy\_options**. Esso ci permette di esaminare le opzioni utilizzate in **named_scope**. Per testare il precedente codice potremmo scrivere:
 

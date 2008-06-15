@@ -1,8 +1,8 @@
 require 'rubygems'
 require 'discount'
-require "uv"
+require 'uv'
 
-desc 'Transforma o arquivo em HTML'
+desc 'Trasforma il file (.textile) in formato HTML'
 task :html => :merge do
   if File.exists?('output/full_book.texttile')
     output = File.new('output/full_book.texttile').read

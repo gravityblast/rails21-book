@@ -16,7 +16,7 @@ E' molto semplice lavorare con essi. Date un'occhiata ai pochi esempi (nei comme
 	record = Comment.new
 	polymorphic_url(record)  #->  comments_url()
 
-Notate come il metodo **polymorphic_url** sia capace di identificare il tipo che gli viene passato e generare di conseguenza il route corretto. Sono anche supportate le **nested resources** e i **namespaces**:
+Notate come il metodo **polymorphic_url** sia capace di identificare il tipo che gli viene passato e generare di conseguenza il route corretto. Sono anche supportate le **nested resources** ed i **namespaces**:
 
 	polymorphic_url([:admin, @article, @comment])
 	#-> this will return:

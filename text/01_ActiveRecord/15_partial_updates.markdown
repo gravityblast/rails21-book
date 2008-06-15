@@ -19,7 +19,7 @@ Questa operazione potrebbe essere enormemente migliorata con l'uso dei **Dirty O
 	article.save
 	#=>  "UPDATE articles SET title = 'New Title' WHERE id = 1"
 
-Notate come solo i campi che sono stati alterati vengono modificati nel database. Se nessun campo viene modificato, allora **ActiveRecord** non esegue alcuna update.
+Notate come solo i campi che sono stati alterati vengono modificati nel database. Se nessun campo viene modificato, allora **ActiveRecord** non esegue alcun update.
 
 Per abilitare/disabilitare questa nuova feature dovete modificare la proprietà **partial\_updates** nel vostro modello.
 

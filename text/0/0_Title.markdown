@@ -1,39 +1,40 @@
 #Introduzione
 
-Around July of 2004 David Heinemeier Hansson publicly released the Ruby on Rails framework, which had been extracted from a web application called Basecamp. More than three years later, on the December 7th, 2007 Ruby on Rails version 2.0 was released with numerous important changes.
+Era circa il mese di luglio del 2004 quando David Heinemeier Hansson rilasciò pubblicamente il framework Ruby on Rails, che è stato estrapolato da un'applicazione chiamata Basecamp. Dopo più di tre anni, il 7 dicembre 2007 è stata rilasciata la versione 2.0 di Ruby on Rails contenente numerosi importanti cambiamenti.
 
-Six months have passed since then, and during this time more than **1400 developers** from all around the world have contributed  **1600 patches** to the framework. Today, June 1st 2008, version 2.1 of the Ruby on Rails framework was released.
+Da allora sono passati altri sei mesi, durante i quali più di **1400 sviluppatori** da tutto il mondo hanno contribuito al framework con **1600 patches**. Oggi, 1 giugno 2008, Ruby on Rails raggiunge la versione 2.1.
 
-Major new features according to David:
+Secondo David le principali novità di questa version riguardano:
 
 * Timezones
 * Dirty tracking
-* Gem Dependencies
+* Dipendenze fra le gem
 * Named scope
-* UTC-based migrations
-* Better caching
+* Migrations basate sul tempo (UTC)
+* Caching migliorato
 
-As always, to update or install the new version:
+Per avviare l'installazione della nuova versione è sufficiente il consueto comando:
 
 	gem install rails
 
-##Acknowledgment
+##Ringraziamenti
 
-To Marcos Tapajós, co-author of this book. If it wasn't for him, you probably you wouldn't be reading this right now.
+A Marcos Tapajós, coautore di questo testo. Se non fosse per lui, probabilmente non leffereste questo libro adesso.
 
-To Daniel Lopes who made the beautiful cover for this edition.
+A Daniel Lopes per la bellissima copertina di questa edizione.
 
-To all of the Ruby on Rails Brazilian community that helped directly or indirectly with this book, commenting on blog posts and giving suggestions. It's like I always say, the best of Rails is its community! Keep creating, inventing, and specially sharing.
+A tutta la comunità brasiliana di Ruby on Rails, che ha collaborato direttamente ed indirettamente a questo libro, commentando i testi pubblicati sul blog e fornendoci suggerimenti. Come mi piace sempre dire, il meglio di Rails è la sua comunità! Continuate a creare, inventare e soprattutto a condividere.
 
-## Traduttori
 
-Questo testo è stato tradotto in italiano dalla comunità Ruby:
+## Traduttori della versione in italiano
+
+Questo testo è stato tradotto in italiano dalla comunità Ruby in Italia:
 
 **Carlo Pecchia** - [http://carlopecchia.eu](http://carlopecchia.ru)
 
 Capitoli 2
 
-**Ali Panick** - []()
+**Mirco Veltri** - []()
 
 Capitoli 10-12
 
@@ -43,7 +44,7 @@ Capitolo 5
 
 **Oscar Del Ben** - []()
 
-Capitolo 5
+Capitolo 6
 
 **Luigi Maselli** - [http://grigio.org](http://grigio.org)
 
@@ -57,4 +58,8 @@ Capitolo 13
 
 Capitolo 14
 
+<<<<<<< HEAD:text/0/0_Title.markdown
 Si ringrazia inoltre, per il supporto e le revisioni: TBD
+=======
+Si ringrazia inoltre, per il supporto e le revisioni: Massimilano Giroldi (), 
+>>>>>>> carlomaster/master:text/0/0_Title.markdown
