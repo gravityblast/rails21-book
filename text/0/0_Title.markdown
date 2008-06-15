@@ -43,6 +43,10 @@ Capitolo 5
 
 **Oscar Del Ben** - []()
 
+Capitolo 5
+
+**Luigi Maselli** - [http://grigio.org](http://grigio.org)
+
 Capitolo 8
 
 **Andrea Reginato** - []()
