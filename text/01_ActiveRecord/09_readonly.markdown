@@ -1,10 +1,10 @@
 ## Relazioni readonly
 
-Una nuova funzionalità viene aggiunta alle realzioni tra modelli. Per evitare cambiamenti dello stato di un modello ora potete utilizzare **:readonly** quando descrivete l'associazione. Date un'occhiata ai seguenti esempi:
+Una nuova funzionalità viene aggiunta alle relazioni tra modelli. Per evitare cambiamenti dello stato di un modello ora potete utilizzare **:readonly** quando descrivete l'associazione. Date un'occhiata ai seguenti esempi:
 
 	has_many :reports, :readonly => true
 
-	has_one :boss, :readonly => :true
+	has_one :boss, :readonly => true
 
 	belongs_to :project, :readonly => true
 

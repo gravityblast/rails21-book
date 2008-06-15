@@ -1,6 +1,6 @@
 ## Utilizzando method\_missing, fate attenzione a non lasciare il fianco scoperto
 
-Il metodo **respond\_to?** è curciale per via della natura dinamica di ruby. Quante volte abbiamo dovuto
+Il metodo **respond\_to?** è cruciale per via della natura dinamica di ruby. Quante volte abbiamo dovuto
 controllare l'esistenza di un metodo o, addirittura, la corrispondenza di tipo di un oggetto (**is\_a?**)?
 
 Comunque, c'è qualcosa di molto importante che molti dimenticano. Date uno sguardo alla classe che
@@ -22,7 +22,7 @@ segue che fa uso di **method\_missing**:
 	rex.bark_and_run #=> woofwoof!
 
 Credo che conosciate già **method\_missing**, non è vero? Nell'esempio di cui sopra, ho creato un'istanza
-della classe **Dog** e chiamato i metodi **bark**, **bark!** e **bark\_and\_run** che non esistono. Quindi, il metodo **method\_missing** viene invocato che, tramite una semplice espressione regolare, restituisce "woofwoof!" ogni qualvolta il metodo inizia con bark.
+della classe **Dog** e chiamato i metodi **bark**, **bark!** e **bark\_and\_run** che non esistono. Quindi, il metodo **method\_missing** viene invocato e, tramite una semplice espressione regolare, restituisce "woofwoof!" ogni qualvolta il metodo inizia con bark.
 
 Osserviamo però cosa accade quando cerco di usare il metodo **respond\_to?**:
 
@@ -30,7 +30,7 @@ Osserviamo però cosa accade quando cerco di usare il metodo **respond\_to?**:
 	rex.bark #=> woofwoof!
 
 Viene restituito false, il che ha un senso visto che la classe non implementa il metodo richiesto.
-Dunque, la responsabilit‡ di modificare il metodo **respond\_to?** affinché lavori correttamente
+Dunque, la responsabilità di modificare il metodo **respond\_to?** affinché lavori correttamente
 con la mia regola speciale, è nostra. Cambieremo la classe come segue:
 
 	class Dog

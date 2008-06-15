@@ -2,7 +2,7 @@
 
 Ora in Rails abbiamo la possibilità di tenere traccia dei cambiamenti effettuati ad un oggetto **ActiveRecord**. E' possibile sapere se un oggetto è stato modificato o meno. Nel caso in cui sia stato modificato, possiamo rintracciare i suoi ultimi cambiamenti. Date un'occhiata ai seguenti esempi:
                   
-  article = Article.find(:first)
+	article = Article.find(:first)
 	article.changed?  #=> false
 
 	article.title  #=> "Title"
