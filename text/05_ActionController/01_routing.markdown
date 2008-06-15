@@ -1,26 +1,25 @@
 ## ActionController::Routing
 
 ### Map.root
-Now, when using **map.root** you can be more **DRY** using an alias for that.
-
-In the earlier versions of rails you used to do it like this:
+Ora quando si usa **map.root** si può essere più **DRY** usando gli alias.
+Nelle precedenti versioni di rails si faceva qualcosa del tipo:
 
 	map.new_session :controller => 'sessions', :action => 'new'
 	map.root :controller => 'sessions', :action => 'new'
-	
-Now you can do it this way:
+
+Ora si può fare in questo modo:
 
 	map.new_session :controller => 'sessions', :action => 'new'
 	map.root :new_session
 	
-### Routes recognition 
-Routes recognition's old implementation used to sweep all routes, one by one, and often turned to be very time consuming. One new and smarter implementation was developed. It creates a tree of routes and the route recognition is made by prefixing, skipping similar routes. This approach lowers recognition time in approximately 2.7 times. 
+### Riconoscimento delle route
+La vecchia implementazione controllava tutte le route, una per una e spesso impiegava molto tempo. È stata sviluppata una nuova e più efficiente implementazione. Viene creato un albero di route e il riconoscimento è fatto tramite i prefissi, saltando le route simili. In questo modo il tempo di riconoscimento viene ridotto di circa 2,7 volte.
 
-All the new implementation is in the file **recognition\_optimisation.rb** and its working details are well explained in the comments. For more information about its implementation see the the documentation inside the source code itself.
+Tutta la nuova implementazione è nel file **recognition\_optimisation.rb** e il suo funzionamento dettegliato è ben spiegato nei commenti. Per maggiori informazioni riguardo la sua implementazione si guardi la documentazione nel codice sorgente stesso.
 
 ### Assert_routing
 
-Now it's possible to test a route with an HTTP method. Look the example:
+Ora è possibile testare una route con un metodo HTTP. Vedi l'esempio:
 
 	assert_routing({ :method => 'put',
 	                 :path => '/product/321' },
@@ -29,21 +28,21 @@ Now it's possible to test a route with an HTTP method. Look the example:
 	                 :id => "321" })
 	
 ### Map.resources
-	
-Imagine you have a site all written in a non-english language and you want to taylor your routes to use the same language. In other words, instead of having:
 
-	http://www.mysite.com.br/products/1234/reviews
+Immagina di avere un sito tutto scritto in una lingua diversa dall'inglese e vuoi impostare le tue route per usare la stessa lingua. In altre parole, invece di avere:
 
-You wished to have something like this:
+	http://www.miosito.it/products/1234/reviews
 
-	http://www.mysite.com.br/produtos/1234/comentarios
+Vorresti avere qualcosa del tipo:
 
-This was already possible, but not in a simple way and without compromising some rails conventions.
+	http://www.miosito.it/prodotti/1234/commenti
 
-Now we have the option **:as** within **map.resources** to personalize our routes. Look our example to get the URL above in portuguese:
+Questo era già possibile ottenerlo, ma non in modo semplice e senza compromettere le convenzioni di rails.
 
-	map.resources :products, :as => 'produtos' do |product|
+Ora ci sono le opzioni **:as** con **map.resources** per personalizzare le proprie route. Vedi l'esempio per avere le URL sopra in italiano:
+
+	map.resources :products, :as => 'prodotti' do |product|
 	  # product_reviews_path(product) ==
-	  # '/produtos/1234/comentarios’
-	  product.resources :product_reviews, :as => 'comentarios'
+	  # '/prodotti/1234/commenti’
+	  product.resources :product_reviews, :as => 'commenti'
 	end
