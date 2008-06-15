@@ -1,4 +1,4 @@
-desc 'Agrupa todos os arquivos em um único arquivo'
+desc 'Raggruppa tutti i file (.textile) in un unico file'
 
 task :merge do
   File.open('output/full_book.texttile', 'w+') do |f|
