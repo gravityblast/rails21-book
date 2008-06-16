@@ -1,4 +1,4 @@
-##Getting information about a plugin
+##Ottenere informaizoni su un plugin
 
 This is one of the new Rails 2.0 features which you probably never used. I say "probably", because in some very specific cases it can be useful, for example, to know a plugin version.
 

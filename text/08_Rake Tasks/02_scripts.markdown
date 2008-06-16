@@ -1,6 +1,8 @@
-## Scripts
+## Gli Script
 
 ### plugin
+
+Il comando `script/plugin install` adesso consente l'utilizzo dell opzione `-e/--export`, ... . Aggiunto il supporto per i plugin hostati su repositori GIT.
 
 The command script/plugin install now allows the use of –e/--export option, so that it issues a svn export. 
 Added support for plugins hosted in GIT repositories.

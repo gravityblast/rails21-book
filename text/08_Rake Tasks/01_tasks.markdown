@@ -2,15 +2,16 @@
 
 ### rails:update
 
-From now on everytime you run the task **rake rails:freeze:edge** it will also run **rails:update**, updating the config files and *JavaScripts*.
+D'ora in poi quando lanciamo il task **rake rails:freeze:edge** verrà eseguito anche **rails:update**,
+che aggiorna i file di configurazione e *JavaScripts*.
 
 ### Database in 127.0.0.1
 
 A change was made in the file databases.rake that used to look only in localhost for local databases, it will now also consider the IP **127.0.0.1**. This works for both **create** and **drop** tasks. The databases.rake file was also refactored to make the code less repetitive.
 
-### Freezing a specific Rails release.
+### Fare il freeze di una versione specifica di Rails.
 
-Until Rails 2.1 it wasn't possible to freeze a specific Rails release inside your project, you could only use its Revision as a parameter. In Rails 2.1, we can freeze a specific release using the command below:
+Antecedentemente a Rails 2.1 non era possibile fare il freeze di uno specifico rilascio di Rails all'interno del proprio progetto, si poteva solo usare la revisione come un parametro. In Rails 2.1, possiamo fare il freeze di uno specifico rilascio usando il comando seguente: 
 
 	rake rails:freeze:edge RELEASE=1.2.0
 
@@ -18,12 +19,12 @@ Until Rails 2.1 it wasn't possible to freeze a specific Rails release inside you
 
 #### rake time:zones:all
 
-Return all the time zones known to Rails, grouped by offset. You can also filter the return value using the optional parameter OFFSET, for instance: OFFSET=-6.
+Ritorna tutte le time zones conosciute da rails, raggruppate per offset. Si può anche filtrare il risultato usando un parametro opzionale OFFSET, ad esempio OFFSET=-6.
 
 #### rake time:zones:us
 
-Shows a list with all US time zones. The OFFSET option is still valid here.
+Visualizza la lista di tutti le fusi time zones relative a US. L'opzione OFFSET è valida.
 
 #### rake time:zones:local
 
-Return all the time zones known to Rails that are in the same offset of your OS.
+Ritorna tutte le time zones conosciute da Rails che hanno lo stesso offset del tuo SO.
