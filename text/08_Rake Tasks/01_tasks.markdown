@@ -7,11 +7,11 @@ che aggiorna i file di configurazione e *JavaScripts*.
 
 ### Database in 127.0.0.1
 
-A change was made in the file databases.rake that used to look only in localhost for local databases, it will now also consider the IP **127.0.0.1**. This works for both **create** and **drop** tasks. The databases.rake file was also refactored to make the code less repetitive.
-
+Un cambiamento è stato apportato nel file `databases.rake` utilizzato solo in locale per i database locali, che ora prende in considerazione anche l'IP **127.0.0.1**. Questo cambiamento funziona per i task **create** e **drop**. Il file `databases.rake` è stato rifatto per rendere il codice meno ripetitivo. 
+ 
 ### Fare il freeze di una versione specifica di Rails.
 
-Antecedentemente a Rails 2.1 non era possibile fare il freeze di uno specifico rilascio di Rails all'interno del proprio progetto, si poteva solo usare la revisione come un parametro. In Rails 2.1, possiamo fare il freeze di uno specifico rilascio usando il comando seguente: 
+Antecedentemente a Rails 2.1 non era possibile fare il freeze di uno specifico rilascio di Rails all'interno del proprio progetto, si poteva solo usare la revisione come parametro. In Rails 2.1, possiamo fare il freeze di uno specifico rilascio usando il comando seguente: 
 
 	rake rails:freeze:edge RELEASE=1.2.0
 
@@ -23,7 +23,7 @@ Ritorna tutte le time zones conosciute da rails, raggruppate per offset. Si può
 
 #### rake time:zones:us
 
-Visualizza la lista di tutti le fusi time zones relative a US. L'opzione OFFSET è valida.
+Visualizza la lista di tutti le time zones relative a US. L'opzione OFFSET è valida.
 
 #### rake time:zones:local
 

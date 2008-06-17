@@ -2,7 +2,7 @@
 
 ### Gemme ora come plugin
 
-Ora, ogni gemma contenete il file **rails/init.rb** puo essere installata all'interno della cartella **vendor** del vostro progetto Rails come un normale **plugin**.
+Ora, ogni gemma contenete il file **rails/init.rb** può essere installata all'interno della cartella **vendor** del vostro progetto Rails come un normale **plugin**.
 
 ### Utilizzare i generators dei plugin
 
