@@ -42,15 +42,19 @@ Capitoli 10-12
 
 Capitolo 5
 
+**Luigi Maselli** - []()
+
+Capitolo 6
+
 **Oscar Del Ben** - []()
+
+Capitolo 7
+
+**Luca Sabato** - [http://sabatia.it](http://sabatia.it)
 
 Capitolo 8
 
 **Andrea Reginato** - []()
-
-Capitolo 9
-
-**Luca Sabato** - [http://sabatia.it](http://sabatia.it)
 
 Capitolo 13
 
