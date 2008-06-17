@@ -1,6 +1,6 @@
 ## ActionController::Caching::Sweeping
 
-Nelle precedenti versioni di rails, quando si dichiarava uno **sweeper**, dovevamo imformare la classe usando i simboli:
+Nelle precedenti versioni di rails, quando si dichiarava uno **sweeper**, dovevamo informare la classe usando i simboli:
 
 	class ListsController < ApplicationController
 	  caches_action :index, :show, :public, :feed
