@@ -39,7 +39,7 @@ Vorresti avere qualcosa del tipo:
 
 Questo era già possibile ottenerlo, ma non in modo semplice e senza compromettere le convenzioni di rails.
 
-Ora ci sono le opzioni **:as** con **map.resources** per personalizzare le proprie route. Vedi l'esempio per avere le URL sopra in italiano:
+Ora c'é l' opzione **:as** con **map.resources** per personalizzare le proprie route. Vedi l'esempio per avere le URL sopra in italiano:
 
 	map.resources :products, :as => 'prodotti' do |product|
 	  # product_reviews_path(product) ==
