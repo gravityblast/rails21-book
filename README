@@ -32,7 +32,7 @@ Innanzi tutto installare il necessario:
 	$ sudo dpkg -i prince_6.0r6-1_i386.deb
 	$ sudo apt-get install libonig2
 	#
-	# installiamo oniguruma
+	# installiamo oniguruma da sorgente
 	#
 	$ wget http://www.geocities.jp/kosako3/oniguruma/archive/onig-5.9.1.tar.gz
 	$ tar -zxvf onig-5.9.1.tar.gz
@@ -46,13 +46,14 @@ Innanzi tutto installare il necessario:
 	$ sudo gem install ultraviolet
 	$ sudo gem install discount
 
-### Ora cloniamo il repositori
+### Ora cloniamo il repository
 
 	$ git clone git://github.com/carlopecchia/rails21-book.git
 
 portarsi nella directory del progetto per scoprire le opzioni di compilazione del libro
 
-  $ rake -T
+  # per visualizzare le opzioni
+	$ rake -T
 	# per compilare in pdf 
 	$ rake pdf
 	# per compilare in html
