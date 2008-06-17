@@ -48,6 +48,10 @@ Capitolo 6
 
 **Oscar Del Ben** - []()
 
+Capitolo 6
+
+**Luigi Maselli** - [http://grigio.org](http://grigio.org)
+
 Capitolo 7
 
 **Luca Sabato** - [http://sabatia.it](http://sabatia.it)
@@ -62,4 +66,8 @@ Capitolo 13
 
 Capitolo 14
 
+<<<<<<< HEAD:text/0/0_Title.markdown
+Si ringrazia inoltre, per il supporto e le revisioni: TBD
+=======
 Si ringrazia inoltre, per il supporto e le revisioni: Massimilano Giroldi (), 
+>>>>>>> carlomaster/master:text/0/0_Title.markdown

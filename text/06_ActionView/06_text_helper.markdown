@@ -2,23 +2,23 @@
 
 ### excerpt
 
-The **excerpt** method is a helper to find a word inside a phrase and return an abreviation of that phrase with the number of given characters as parameters before and after the word, adding, when necessary the "…". Look an example:
+Il metodo **excerpt** è un helper che trova una parola dentro un testo e restituisce un'abbreviazione di quel testo con il numero di caratteri, dati come parametro, prima e dopo la parola. Se necessario verranno aggiunti "…". Esempio:
 
 	excerpt('This is an example', 'an', 5)
 	# => "…s is an examp…"
-	
-But the problem it was bugged. If you count, you'll see the method returned 6 chars and not 5. This bug was fixed. Look the example of the correct output for this method:
+
+Il problema è che è sbagliato. Il metodo ha restituito 6 caratteri e non 5. Questo bug è stato corretto. Ecco l'output corretto di questo metodo:
 
 	excerpt('This is an example', 'an', 5)
 	# => "…s is an exam…"
 	
 ###simple\_format
 
-The **simple\_format** method basically receives as a parameter any text and formats it in a simple way to **HTML**. It takes the text and replaces line breaks (\n) by **HTML** tag "< br />". And when we have two line breaks one after other  (\n\n)  it separates the text in paragraphs using "< p>"tag.
+Il metodo **simple\_format** principalmente riceve come parametro un qualsiasi testo e lo formatta in modo semplice in **HTML**. Prende il testo e sostituisce a capo (\n) con il tag **HTML** "< br />" e quando si hanno due a capo consecutivi (\n\n) separa il testo nel paragrafo con il tag "< p>".
 
-In Rails 2.1 this method received an additional parameter. Besides text, we are going to be able to inform which **HTML** attributes we would like "< p>" tag had. Look the examples:
+In Rails 2.1 questo metodo supporta ulteriori parametri. Oltre al testo, si può specificare quali attributi **HTML** vogliamo che il tag "< p>" abbia. Esempio: 
 
 	simple_format("Hello Mom!", :class => 'description')
 	# => "<p class=’description’>Hello Mom!</p>"
 
-The **HTML** attributes will be added in all "< p>" tags created by the method.
+Gli attributi **HTML** saranno aggiunti in tutti i tag "< p>" creati dal metodo.

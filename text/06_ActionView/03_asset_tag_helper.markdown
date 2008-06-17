@@ -2,16 +2,16 @@
 
 ### register\_javascript\_expansion
 
-This method registers one or more javascript files to be included when a symbol, defined by the programmer, is given as a parameter to the **javascript\_include\_tag** method. The idea is to call this method inside the **init.rb** of your plugin, in order to register the javascript files which your plugin places in the folder **public/javascripts**. Let's see how it works:
+Questo metodo registra uno o più file javascript per essere inclusi quando un simbolo, definito dal programmatore, è dato come parametro al metodo **javascript\_include\_tag**. L'idea è di chiamare questo metodo dentro il file  **init.rb** del plugin, per registrare i file javascript che il plugin mette in **public/javascripts**. Ecco come funziona:
 
-	# In the init.rb file
+	# Nel file the init.rb
 	ActionView::Helpers::AssetTagHelper.register_javascript_expansion 
 		:monkey => ["head", "body", "tail"] 
 
-	# In our view:
+	# Nella view:
 	javascript_include_tag :monkey
 
-	# We are going to have:
+	# Otteremo qualcosa come:
 	<script type="text/javascript" src="/javascripts/head.js"></script>
 	<script type="text/javascript" src="/javascripts/body.js"></script>
 	<script type="text/javascript" src="/javascripts/tail.js"></script>
@@ -19,16 +19,17 @@ This method registers one or more javascript files to be included when a symbol,
 
 ### register\_stylesheet\_expansion
 
-This method does exactly the same as the **ActionView::Helpers::AssetTagHelper#register\_javascript\_expansion** method, but it creates a symbol to be used later when making calls to **stylesheet\_link\_tag** method. Look an example:
 
-	# In the init.rb file
+Questo metodo fa esattamente lo stesso di **ActionView::Helpers::AssetTagHelper#register\_javascript\_expansion**, ma crea un simbolo per essere usato dopo tramite il metodo **stylesheet\_link\_tag**. Si osservi l'esempio:
+
+	# Nel file the init.rb
 	ActionView::Helpers::AssetTagHelper.register_stylesheet_expansion 
 		:monkey => ["head", "body", "tail"] 
 
-	# In our view:
+	# Nella view:
 	stylesheet_link_tag :monkey
 
-	# We are going to have:
+	# Otteremo qualcosa come:
 	<link href="/stylesheets/head.css"  media="screen" rel="stylesheet" 
 		type="text/css" />
 	<link href="/stylesheets/body.css"  media="screen" rel="stylesheet" 
