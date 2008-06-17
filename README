@@ -1,0 +1,60 @@
+# Novità in rails 2.1
+
+## Come compilare l'ebook
+
+Innanzi tutto installare il necessario:
+* Oniguruma
+* Prince Xml
+* Ultraviolet
+* Discount
+
+### su mac os x
+
+	# installiamo Prince Xml
+	$ wget http://www.princexml.com/download/prince-6.0r6-macosx.tar.gz
+	$ tar -zxvf prince-6.0r6-macosx.tar.gz
+	$ cd prince-6.0r6-macosx
+	$ sudo ./install.sh #scegliere /usr/local come percorso
+	#
+	# installiamo oniguruma
+	#
+	$ wget http://www.geocities.jp/kosako3/oniguruma/archive/onig-5.9.1.tar.gz
+	$ tar -zxvf onig-5.9.1.tar.gz
+	$ cd onig-5.9.1
+	$ ./configure --prefix=/usr/local
+	$ sudo make
+	$ sudo make install
+	
+### su debian/ubuntu
+
+	# installiamo Prince Xml
+	$ wget http://www.princexml.com/download/prince_6.0r6-1_i386.deb
+	$ sudo dpkg -i prince_6.0r6-1_i386.deb
+	$ sudo apt-get install libonig2
+	#
+	# installiamo oniguruma
+	#
+	$ wget http://www.geocities.jp/kosako3/oniguruma/archive/onig-5.9.1.tar.gz
+	$ tar -zxvf onig-5.9.1.tar.gz
+	$ cd onig-5.9.1
+	$ ./configure
+	$ make
+	$ make install
+
+### Installiamo le gemme necessarie
+
+	$ sudo gem install ultraviolet
+	$ sudo gem install discount
+
+### Ora cloniamo il repositori
+
+	$ git clone git://github.com/carlopecchia/rails21-book.git
+
+portarsi nella directory del progetto per scoprire le opzioni di compilazione del libro
+
+  $ rake -T
+	# per compilare in pdf 
+	$ rake pdf
+	# per compilare in html
+	$ rake html
+	
