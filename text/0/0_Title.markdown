@@ -19,7 +19,7 @@ Per avviare l'installazione della nuova versione è sufficiente il consueto coma
 
 ##Ringraziamenti
 
-A Marcos Tapajós, coautore di questo testo. Se non fosse per lui, probabilmente non leffereste questo libro adesso.
+A Marcos Tapajós, coautore di questo testo. Se non fosse per lui, probabilmente non leggereste questo libro adesso.
 
 A Daniel Lopes per la bellissima copertina di questa edizione.
 
@@ -47,6 +47,10 @@ Capitolo 5
 Capitolo 8
 
 **Andrea Reginato** - []()
+
+Capitolo 9
+
+**Luca Sabato** - [http://sabatia.it](http://sabatia.it)
 
 Capitolo 13
 
