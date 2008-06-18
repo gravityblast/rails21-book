@@ -66,8 +66,5 @@ Capitolo 13
 
 Capitolo 14
 
-<<<<<<< HEAD:text/0/0_Title.markdown
-Si ringrazia inoltre, per il supporto e le revisioni: TBD
-=======
 Si ringrazia inoltre, per il supporto e le revisioni: Massimilano Giroldi (), 
->>>>>>> carlomaster/master:text/0/0_Title.markdown
+
