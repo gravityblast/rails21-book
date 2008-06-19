@@ -1,6 +1,6 @@
 ##Mime Types
 
-It was fixed a bug which didn't allow you to define the assigned attribute for **request.format** using a symbol. Now, we can use the code bellow:
+E' stato corretto un bug che non permetteva di assegnare l'attributo **request.format** usando un simbolo. Ora possiamo utilizzare il seguente codice:
 
 	request.format = :iphone
 	assert_equal :iphone, request.format

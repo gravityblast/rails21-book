@@ -5,4 +5,4 @@ Ora i metodi **increment**, **increment!**, **decrement** e **decrement!** di **
 	player1.increment!(:points, 5)
 	player2.decrement!(:points, 2)
 
-Nel precedente esempio sto aggiungendo 5 punti al giocatore 1 (player1) e sottraendo 2 punti dal giocatore 2 (player2). Dal momento che questo parametro è opzionale, il codice esistente non viene invalidato.
+Nel precedente esempio stiamo aggiungendo 5 punti al giocatore 1 (player1) e sottraendo 2 punti dal giocatore 2 (player2). Dal momento che questo parametro è opzionale, il codice esistente non viene invalidato.

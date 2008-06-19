@@ -1,6 +1,6 @@
 ## Smallint, int oppure bigint in MySQL?
 
-Ora l'adapter **MySQL** per **ActiveRecord** è più intelligente quando creaimo o modifichiamo le colonne nel database utilizzando i tipi interi. Conformemente all'opzione  **:limit**, viene stabilito il tipo della colonna come **smallint**, **int** oppure **bigint**. Date un'occhiata ai seguenti esempi:
+Ora l'adapter **MySQL** per **ActiveRecord** è più intelligente quando creiamo o modifichiamo le colonne nel database utilizzando i tipi interi. Conformemente all'opzione  **:limit**, viene stabilito il tipo della colonna come **smallint**, **int** oppure **bigint**. Date un'occhiata ai seguenti esempi:
 
 	case limit
 	when 0..3

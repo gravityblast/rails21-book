@@ -14,7 +14,7 @@ Per comprendere pienamente cosa porta a Rails questa aggiunta osserviamo gli ese
 	Article.containing_the_letter_a.find(:first)
 	Article.containing_the_letter_a.find(:all, :conditions => {…})
 
-Anziché creare un nuovo metodo **published** che restituisca tutti i post pubblicati, utilizzo un **named\_scope** che lo faccia per me. Ma fa ben più di questo. Osserviamo un ulteriore esempio su come possa essere utilizzato:
+Anziché creare un nuovo metodo **published** che restituisca tutti i post pubblicati, utilizziamo un **named\_scope** che lo faccia per noi. Ma fa ben più di questo. Osserviamo un ulteriore esempio su come possa essere utilizzato:
  
 	named_scope :written_before, lambda { |time|
 	  { :conditions => ['written_on < ?', time] }
@@ -33,9 +33,9 @@ Anziché creare un nuovo metodo **published** che restituisca tutti i post pubbl
 
 ## Testare named\_scope con proxy\_options 
 
-I **named scopes** sono una nuova feature molto interessante per Rails 2.1, ma dopo averli usati per un po' potreste avere difficoltà scrivendo dei test in contesti più complessi.
+I **named scopes** sono una nuova feature molto interessante per Rails 2.1, ma dopo averli usati per un po' potreste avere difficoltà nello scrivere dei test in contesti più complessi.
 
-Osserviamo un esempio:                                                                                 
+Osserviamo un esempio:                                                           
 
 		class Shirt < ActiveRecord::Base
 		  named_scope :colored, lambda { |color|

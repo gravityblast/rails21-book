@@ -9,19 +9,19 @@ Ora in Rails abbiamo la possibilità di tenere traccia dei cambiamenti effettuat
 	article.title = "New Title"
 	article.title_changed? #=> true
 
-	# shows title before change
+	# mostra title prima che venisse modificato
 	article.title_was  #=> "Title"
 
-	# before and after the change
+	# prima e dopo la modifica
 	article.title_change  #=> ["Title", "New Title"]
 
 Come potete vedere è molto semplice. Potete anche ottenere una lista di tutti i cambiamenti effettuati sull'oggetto con uno dei seguenti metodi:
 
-	# returns a list with all of the attributes that were changed
+	# restituisce una lista con tutti gli attributi che sono stati modificati
 	article.changed  #=> ['title']
 
-	# returns a hash with attributes that were changed 
-	# along with its values before and after
+	# restituisce un hash con gli attributi che sono stati modificati,
+	# unitamente ai loro valori prima e dopo la modifica
 	article.changes  #=> { 'title’ => ["Title", "New Title"] }
 
 
@@ -31,7 +31,7 @@ Notate che quando un oggetto viene salvato il suo stato cambia:
 	article.save  #=> true
 	article.changed?  #=> false
 
-Nel caso in cui vogliate modificare lo stato di un oggetto senza utilizzare **attr=**, avrete bisogno di indicare esplicitamente che l'attributo verrà  cambiato utilizzando il metodo **attr\_name\_will\_change!** (sostituire **attr** con l'attributo reale dell'oggetto). Date un'occhiata ai seguenti esempi:
+Nel caso in cui vogliate modificare lo stato di un oggetto senza utilizzare **attr=**, avrete bisogno di indicare esplicitamente che l'attributo verrà cambiato utilizzando il metodo **attr\_name\_will\_change!** (sostituire **attr** con l'attributo reale dell'oggetto). Date un'occhiata ai seguenti esempi:
     
 	article = Article.find(:first)
 	article.title_will_change!

@@ -19,7 +19,7 @@ E' molto semplice lavorare con essi. Date un'occhiata ai pochi esempi (nei comme
 Notate come il metodo **polymorphic_url** sia capace di identificare il tipo che gli viene passato e generare di conseguenza il route corretto. Sono anche supportate le **nested resources** ed i **namespaces**:
 
 	polymorphic_url([:admin, @article, @comment])
-	#-> this will return:
+	#-> restituirà:
 	admin_article_comment_url(@article, @comment)
 
 

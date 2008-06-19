@@ -1,9 +1,10 @@
 ## Fragment\_exist?
 
-Two new methods were added to **cache\_store**: **fragment\_exist?** and **exist?**.
+Due nuovi metodi sono stati aggiunti a **cache\_store**: **fragment\_exist?** e **exist?**.
 
-The method **fragment\_exist?** does exactly what you would expect, it verifies if a cached fragment informed by one key exists.  Basically replacing the famous:
+Il metodo **fragment\_exist?** fa esattamente ciò che vi potete aspettare: verifica che un frammento di cache _informed by one_ esista.
+Praticamente rimpiazza il ben noto:
 
 	read_fragment(path).nil?
 
-**exist?** method was added to **cache\_store**, while **fragment\_exist?**  is a helper which you could use inside your controller.
+Il metodo **exist?** è stato aggiunto a **cache\_store**, mentre **fragment\_exist?** è un helper che potete utilizzare nel vostro controller.

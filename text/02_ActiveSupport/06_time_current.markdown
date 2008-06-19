@@ -1,12 +1,12 @@
 ## Time.current
 
-A new method for **Time** class. The **current** method's return depends on **config.time\_zone**, if it was specified before, the method will return a **Time.zone.now**, otherwise will be a **Time.now**.
+C'è un nuovo metodo per la classe **Time**. Il valore del metodo **current** dipende da **config.time\_zone**, se è stato specificato precedentemente il metodo restituirà un  **Time.zone.now** altrimenti un **Time.now**.
 
-	# return value depends on config.time_zone
+	# il valore di ritorno dipende da config.time_zone
 	Time.current
 
-**since** and **ago** methods also had their returning values changed, returning a **TimeWithZone** in case **config.time\_zone** as specified.
+Anche i metodi **since** e **ago** hanno modificato i propri valori di ritorno restituendo un  **TimeWithZone** nel caso in cui **config.time\_zone** sia stato specificato.
 
-It makes the **Time.current** method as new default method to get the actual time, replacing the **Time.now** (which keeps existing, but it doesn't consider the specified timezone).
+Ciò rende il metodo **Time.current** il nuovo metodo di default per recuperare l'orario attuale, rimpiazzando **Time.now** (che continua ad esistere, ma non tiene conto del timezone specificato).
 
-The **datetime\_select** methods, **select\_datetime** and **select\_time** also have been updated to have their default returning as **Time.current**.
+Anche i metodi **datetime\_select**, **select\_datetime** e **select\_time** sono stati aggiornati a restituire come valore di default **Time.current**.

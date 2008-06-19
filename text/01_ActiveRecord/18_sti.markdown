@@ -9,8 +9,8 @@ Quando utilizziamo **modelli** con **namespace** e **STI**, **ActiveRecord** sal
 	item.type # => 'Item’
 
 	item2 = CollectionItem.find(item.id)
-	# returns an error, because it can't find
-	# the class Item
+	# restituisce un errore poiché non è possibile
+	# trovare la classe Item
 
 Questa modifica aggiunge una nuova opzione che permette ad **ActiveRecord** di salvare l'intero nome della classe.
 

@@ -16,7 +16,7 @@ In questo caso potete passare un'instanza di **Money** come parametro del metodo
 	
 ### Last
 
-Fino ad ora potevamo usare solamente tre operatori per ricercare i dati utilizzando il metodo **find** di **ActiveRecord**. Questi sono: **:first**, **:all** e l'id dell'oggetto (in questo caso non passiamo nessun argomento a **find** oltre all'id stesso)           
+Fino ad ora potevamo usare solamente tre operatori per ricercare i dati utilizzando il metodo **find** di **ActiveRecord**. Questi sono: **:first**, **:all** e l'id dell'oggetto (in questo caso non passiamo nessun argomento a **find** oltre all'id stesso)
 
 In Rails 2.1 esiste un quarto operatore chiamato **:last**. Qualche esempio:
 

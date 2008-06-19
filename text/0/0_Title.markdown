@@ -10,10 +10,10 @@ Secondo David le principali novità di questa version riguardano:
 * Dirty tracking
 * Dipendenze fra le gem
 * Named scope
-* Migrations basate sul tempo (UTC)
+* Migrations basate sul timestamp (UTC)
 * Caching migliorato
 
-Per avviare l'installazione della nuova versione è sufficiente il consueto comando:
+Come di consueto per avviare l'installazione o l'aggiornamento alla nuova versione è sufficiente il  comando:
 
 	gem install rails
 
@@ -26,9 +26,11 @@ A Daniel Lopes per la bellissima copertina di questa edizione.
 A tutta la comunità brasiliana di Ruby on Rails, che ha collaborato direttamente ed indirettamente a questo libro, commentando i testi pubblicati sul blog e fornendoci suggerimenti. Come mi piace sempre dire, il meglio di Rails è la sua comunità! Continuate a creare, inventare e soprattutto a condividere.
 
 
-## Traduttori della versione in italiano
+## Traduttori della versione italiana
 
 Questo testo è stato tradotto in italiano dalla comunità Ruby in Italia:
+
+[TODO rivedere bene i contributi di ciascuno]
 
 **Carlo Pecchia** - [http://carlopecchia.eu](http://carlopecchia.ru)
 
@@ -66,8 +68,4 @@ Capitolo 13
 
 Capitolo 14
 
-<<<<<<< HEAD:text/0/0_Title.markdown
-Si ringrazia inoltre, per il supporto e le revisioni: TBD
-=======
 Si ringrazia inoltre, per il supporto e le revisioni: Massimilano Giroldi (), 
->>>>>>> carlomaster/master:text/0/0_Title.markdown

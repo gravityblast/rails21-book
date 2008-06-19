@@ -21,7 +21,7 @@ Il metodo **has\_one** adesso dispone dell'opzione **through**. Funziona esattam
 	
 ### Has\_one con :source\_type             
 
-Il metodo **has\_one :through**, appena visto, ha anche l'opzione **:source\_type**. Cercherò di illustrarla attraverso qualche esempio. Iniziamo con le due classi seguenti:
+Il metodo **has\_one :through**, appena visto, ha anche l'opzione **:source\_type**. Cercheremo di illustrarla attraverso qualche esempio. Iniziamo con le due classi seguenti:
 
 	class Client < ActiveRecord::Base
 	  has_many :contact_cards 
@@ -41,7 +41,7 @@ Nel successivo passo del nostro esempio creiamo due classi per rappresentare una
 	  has_many :contact_cards, :as => :contact
 	end
 
-**Person** e **Business** sono correlate alla mia classe **Client** attraverso la tabella **ContactCard**. In altre parole ho due tipi di contatti: personali e di business. 
+**Person** e **Business** sono correlate alla nostra classe **Client** attraverso la tabella **ContactCard**. In altre parole abbiamo due tipi di contatti: personali e di business. 
           
 Ciò, comunque, non funziona. Osservate cosa succedere quando cerco di recuperare un contatto:
 

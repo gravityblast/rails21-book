@@ -1,6 +1,6 @@
-## Add columns in PostgreSQL
+## Aggiungere colonne in PostgreSQL
 
-There was a bug when using **PostgreSQL**. The bug occurred when creating a migration for adding a column in an existing table. Look an example:
+C'era un bug usando **PostgreSQL**. Il problema si presentava quando si voleva creare una migration per aggiungere una colonna ad una tabella esistente. Osservate l'esempio:
 
 File: *db/migrate/002\_add\_cost.rb*
 
@@ -15,7 +15,7 @@ File: *db/migrate/002\_add\_cost.rb*
 	  end
 	end
 
-Note we are creating a column with **:precision => 6** and **:scale => 2**. Now run **rake db:migrate** and let's see how is our table in database:
+Notate che stiamo creando una colonna con **:precision => 6** e **:scale => 2**. Ora lanciamo **rake db:migrate**  e vediamo come si presenta la tabella nel database:
 
 <table border="1" cellspacing="0" cellpadding="5">
 	<tr>
@@ -45,4 +45,4 @@ Note we are creating a column with **:precision => 6** and **:scale => 2**. Now 
 	</tr>
 </table>
 
-See "cost" column which we just created. It is a common **numeric**, but it was supposed to be a column like "price", above it, more precisely a **numeric(6,2)**. In Rails 2.1 this error doesn't occur anymore and the column will be created in the correct way.
+Guardate la colonna "cost" che abbiamo appena creato. E' semplicemente **numeric**, mentre volevamo ottenere una colonna simile a "price", che come possiamo vedere sopra è un **numeric(6,2)**. Con Rails 2.1 questo errore non c'è più, e la colonna verrà creata correttamente.   
