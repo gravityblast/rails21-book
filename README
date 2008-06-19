@@ -27,19 +27,10 @@ Innanzi tutto installare il necessario:
 	
 ### su debian/ubuntu
 
-	# installiamo Prince Xml
+	# installiamo Prince Xml (nota: è un software proprietario [grigio])
 	$ wget http://www.princexml.com/download/prince_6.0r6-1_i386.deb
 	$ sudo dpkg -i prince_6.0r6-1_i386.deb
 	$ sudo apt-get install libonig2
-	#
-	# installiamo oniguruma da sorgente
-	#
-	$ wget http://www.geocities.jp/kosako3/oniguruma/archive/onig-5.9.1.tar.gz
-	$ tar -zxvf onig-5.9.1.tar.gz
-	$ cd onig-5.9.1
-	$ ./configure
-	$ make
-	$ make install
 
 ### Installiamo le gemme necessarie
 

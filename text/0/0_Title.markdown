@@ -1,10 +1,10 @@
 #Introduzione
 
-Era circa il mese di luglio del 2004 quando David Heinemeier Hansson rilasciò pubblicamente il framework Ruby on Rails, che è stato estrapolato da un'applicazione chiamata Basecamp. Dopo più di tre anni, il 7 dicembre 2007 è stata rilasciata la versione 2.0 di Ruby on Rails contenente numerosi importanti cambiamenti.
+Era circa il mese di luglio del 2004 quando David Heinemeier Hansson rilasciò pubblicamente il framework Ruby on Rails, che era stato estrapolato da un'applicazione chiamata Basecamp. Dopo più di tre anni, il 7 dicembre 2007 è stata rilasciata la versione 2.0 di Ruby on Rails contenente numerosi importanti cambiamenti.
 
 Da allora sono passati altri sei mesi, durante i quali più di **1400 sviluppatori** da tutto il mondo hanno contribuito al framework con **1600 patches**. Oggi, 1 giugno 2008, Ruby on Rails raggiunge la versione 2.1.
 
-Secondo David le principali novità di questa version riguardano:
+Secondo David le principali novità di questa versione riguardano:
 
 * Timezones
 * Dirty tracking
@@ -28,7 +28,7 @@ A tutta la comunità brasiliana di Ruby on Rails, che ha collaborato direttament
 
 ## Traduttori della versione italiana
 
-Questo testo è stato tradotto in italiano dalla comunità Ruby in Italia:
+Questo testo è stato tradotto in italiano grazie alla collaborazione dei membri della comunità Italiana di Ruby [ruby-it.org](http://www.ruby-it.org) + [:p@r](http://www.pro-ruby.net)
 
 [TODO rivedere bene i contributi di ciascuno]
 
