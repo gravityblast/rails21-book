@@ -1,3 +1,4 @@
 # ActionController
+
 ActionController è il livello responsabile della ricezione delle richieste web e di prendere le decisioni di cosa sta accadendo per renderizzare o redirigere la richiesta a un'altra action.
 Una action è definita come metodo pubblico insieme ai controller che sono automaticamente disponibili tramite le routes.
