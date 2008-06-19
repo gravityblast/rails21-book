@@ -1,8 +1,8 @@
 ## TimeZone
 
-### Defining a default timezone
+### Definire un fuso orario predefinito (timezone)
 
-One new option was added to **time\_zone\_select** method, you can now present a default value in cases which your user didn't select any **TimeZone**, or when the database column is null. To achieve this, a **:default** option was created and can be used as such:
+Al metodo **time\_zone\_select** è stata aggiunta una nuova opzione, ora potete visualizzare un valore predefinito nel caso l'utente non selezioni nessun **TimeZone**, oppure quando la colonna sul database è nulla. Per ottenere questo, è stata introdotta l'opzione **:default** che può essere utilizzata come segue:
 
 	time_zone_select("user", "time_zone", nil, :include_blank => true)
 	
@@ -12,30 +12,30 @@ One new option was added to **time\_zone\_select** method, you can now present a
 	time_zone_select( "user", 'time_zone', TimeZone.us_zones, 
 		:default => "Pacific Time (US & Canada)")
 
-In cases where we use the **:default** option, it must be shown with the informed **TimeZone** already selected.
+Nel caso in cui utilizziamo l'opzione **:default**, dovrebbe essere visualizzato il **TimeZone** già selezionato.
 
-### The formatted_offset method
+### Il metodo formatted_offset
 
-The **formatted\_offset** method was included in the **Time** and **DateTime** classes to return with the format **+HH:MM** the deviation of UTC time. For example, in our timezone (Brasilia time) the deviation value returned by the method would be a string with its value set to **"-03:00″**.
+Il metodo **formatted\_offset** è stato incluso nelle classi **Time** e **DateTime**. Questo metodo restituisce la differenza tra il nostro **TimeZone** e UTC, nel formato **+HH:MM**. Ad esempio, se ci troviamo in Brasile, la differenza restituita dal metodo sarà una stringa uguale a **"-03:00″**.
 
-Let's see some examples:
+Vediamo alcuni esempi:
 
-Getting the deviation from a DateTime:
+Calcolare la differenza da un data (DateTime):
 
 	datetime = DateTime.civil(2000, 1, 1, 0, 0, 0, Rational(-6, 24))
 	datetime.formatted_offset         # => "-06:00″
 	datetime.formatted_offset(false)  # => "-0600″
 
-Now from Time:
+Calcolare la differenza da un orario (Time):
 
 	Time.local(2000).formatted_offset         # => "-06:00″
 	Time.local(2000).formatted_offset(false)  # => "-0600″
 
-Note this method returns **string**, which can be either formatted or not depending of the value given as parameter.
+Da notare che questo metodo restituisce una stringa (**string**), che può essere formattata o meno a seconda del valore passato come parametro.
 
-### The with\_env\_tz method
+### Il metodo with\_env\_tz
 
-The **with\_env\_tz** method allows us to make tests with different timezones in a very simple way:
+Il metodo **with\_env\_tz** ci consente di scrivere test realtivi a fusi orari differenti con molta semplicità:
 
 	def test_local_offset
 	  with_env_tz 'US/Eastern' do
@@ -46,30 +46,31 @@ The **with\_env\_tz** method allows us to make tests with different timezones in
 	  end
 	end
 
-This helper was supposed to call **with\_timezone**, but it was renamed for **with\_env\_tz** to avoid confusion with the timezone informed by using **ENV['TZ']** and **Time.zone**.
+Inizialmente si pensò di chiamare questo helper **with\_timezone**, poi è stato rinominato in **with\_env\_tz** per evitare confusione con il fuso orario restituito da **ENV['TZ']** e **Time.zone**.
 
 ### Time.zone_reset!
 
-Was removed for not being used anymore
+È stato rimosso per non essere più usato.
 
 ### Time#in\_current\_time\_zone
 
-Was modified to return **self** when **Time.zone** is null. 
+È stato modificato per restituire **self** quando **Time.zone** è nullo. 
 
 ### Time#change\_time\_zone\_to\_current
 
-Was modified to return **self** when **Time.zone** is null. 
+È stato modificato per restituire **self** quando **Time.zone** è nullo. 
 
 ### TimeZone#now
 
-The **TimeZone#now** method was modified to return an **ActiveSupport::TimeWithZone** representing the current time in the configured timezone as defined in **Time.zone**. For example:
+Il metodo **TimeZone#now** è stato modificato per ritornare un oggetto **ActiveSupport::TimeWithZone** rappresentante l'orario corrente, nel fuso orario configurato, come definito in **Time.zone**. Ad esempio:
 
 	Time.zone = 'Hawaii'  # => "Hawaii"
 	Time.zone.now         # => Wed, 23 Jan 2008 20:24:27 HST -10:00
 
 ### Compare\_with\_coercion
-	
-The method **compare\_with\_coercion** (with an alias for <=>) was created  in **Time** e **DateTime** classes, becoming possible to make a chronological comparison between the **Time**, **DateTime** classes and instances of  **ActiveSupport::TimeWithZone** objects. For a better understanding, take a look the examples bellow (each line result is in the comment placed following the code):
+
+Il metodo **compare\_with\_coercion** (e il suo alias <=>) è stato inserito nelle classi **Time** e **DateTime** rendendo possibile effettuare comparazioni cronologiche tra le classi **Time** e **DateTime**, e le instanze di  **ActiveSupport::TimeWithZone**.
+Per comprendere meglio, diamo un'occhita a questo esempio (i risultati di ogni linea sono contenuti nei commenti):
 
 	Time.utc(2000) <=> Time.utc(1999, 12, 31, 23, 59, 59, 999) # 1
 	Time.utc(2000) <=> Time.utc(2000, 1, 1, 0, 0, 0) # 0
@@ -85,15 +86,15 @@ The method **compare\_with\_coercion** (with an alias for <=>) was created  in *
 
 ### TimeWithZone#between?
 
-The **between?** method was included in the **TimeWithZone** class to verify if an instance is found between two dates. Example:
+Il metodo **between?** è stato incluso nella classe **TimeWithZone** per verificare se un'istanza è compresa tra due date. Esempio:
 
 	@twz.between?(Time.utc(1999,12,31,23,59,59),
 	              Time.utc(2000,1,1,0,0,1))
 	
 ### TimeZone#parse
-	
-This method creates a new instance of **ActiveSupport::TimeWithZone** from a string. For example:
 
+Questo metodo crea una nuova istanza di **ActiveSupport::TimeWithZone** a partire da una stringa. Ad esempio:
+	
 	Time.zone = "Hawaii"
 	# => "Hawaii"
 	Time.zone.parse('1999-12-31 14:00:00')
@@ -107,7 +108,7 @@ This method creates a new instance of **ActiveSupport::TimeWithZone** from a str
 
 ### TimeZone#at
 
-This method can be used to create a new instance of **ActiveSupport::TimeWithZone** from the number of seconds since Unix epoch. For example:
+Questo metodo può essere usato per creare una nuova istanza di **ActiveSupport::TimeWithZone** a partire dal numero di secondi trascorsi dalla Unix epoch. Ad esempio:
 
 	Time.zone = "Hawaii" # => "Hawaii"
 	Time.utc(2000).to_f  # => 946684800.0
@@ -115,13 +116,13 @@ This method can be used to create a new instance of **ActiveSupport::TimeWithZon
 	Time.zone.at(946684800.0)
 	# => Fri, 31 Dec 1999 14:00:00 HST -10:00
 
-### More methods
+### Altri metodi
 
-The **to\_a**, **to\_f**, **to\_i**, **httpdate**, **rfc2822**, **to\_yaml**, **to\_datetime** and **eql?** methodos were added in the **TImeWithZone** class. For more information about these methodos please head to **Rails** documentation.
+I metodi **to\_a**, **to\_f**, **to\_i**, **httpdate**, **rfc2822**, **to\_yaml**, **to\_datetime** e **eql?** sono stati aggiunti alla classe **TimeWithZone**. Per altre informazioni riguardo questi metodi fate riferimento alla documentazione di **Rails**.
 
-### TimeWithZone class preparing itself for Ruby 1.9
+### Preparare la classe TimeWithZone per Ruby 1.9
 
-In Ruby 1.9 we'll have some new methods in the **Time** class, methods such as:
+In Ruby 1.9 avremo alcuni nuovi metodi nella classe **Time**, come ad esempio:
 
 	Time.now
 	# => Thu Nov 03 18:58:25 CET 2005
@@ -129,16 +130,16 @@ In Ruby 1.9 we'll have some new methods in the **Time** class, methods such as:
 	Time.now.sunday?
 	# => false
 
-A respective method exists for each day of the week.
+Esiste un metodo per ogni giorno della settimana.
 
-Another interesting things is that **to\_s** method of **Time** object will have a different returning value. Today when we execute **Time.new.to\_s**, we have the following:
+Un'altra cosa interessante è che il metodo **to\_s** dell'oggetto **Time** restituisce un valore differente. Attualmente quando eseguiamo **Time.new.to\_s**, viene restituito:
 
 	Time.new.to_s
 	# => "Thu Oct 12 10:39:27 +0200 2006″
 
-In Ruby 1.9 we will have:
+In Ruby 1.9 avremo:
 
 	Time.new.to_s
 	# => "2006-10-12 10:39:24 +0200″
 
-What's all of that have to do with Rails 2.1? Everything. Rails is being prepared to deal with these modifications. The **TimeWithZone** class, for example, just received some enhancements to work with the methods of the first example.
+Cosa ha a che fare tutto ciò con Rails 2.1? Tutto. Rails viene migliorato affinché tenga in considerazione queste modifiche. La class **TimeWithZone**, ad esempio, è stata migliorata per funzionare con il metodo del primo esempio.

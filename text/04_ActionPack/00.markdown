@@ -1,4 +1,4 @@
 # ActionPack
 
-Comprises ActionView (visualization generation for end user, like HTML, XML, JavaScript, and etc) and ActionController (business flow control)
-(adapted from wikipedia)
+ActionPack raccoglie due librerie: ActionView (generazione delle viste per l'utente finale, come HTML, XML, JavaScript, etc) e ActionController (controllo del flusso dell'applicazione).
+(adattato da wikipedia)

@@ -1,21 +1,21 @@
-## A new way of using partials
+## Un nuovo modo di utilizzare i partials
 
-Something very common in Rails software development is the use of **partials** to avoid code repetition. Look an example of use:
+Una prassi molto comune nello sviluppo con Rails è l'utilizzo di **partials** per evitare la ripetizione di codice. Ecco un esempio del loro utilizzo:
 
 	<% form_for :user, :url => users_path do %>
 		<%= render :partial => 'form' %>
 		<%= submit_tag 'Create' %>
 	<% end %>
 
-**Partial** is a code fragment (a template). The advantage of using an **partial** is to avoid unnecessary code repetition. Using a **partial** is very simple, you can start with something like this: **render :partial => "name"**. After, you must create a file with the same name of your **partial**, but using a underscore in front of it. Just that.
+Un **Partial** è un frammento di codice (un template). Utilizzare i **partial** offre il vantaggio di evitare un'inutile ripetizione del codice. Utilizzare un **partial** è molto semplice, potete iniziare con qualcosa come: **render :partial => "name"**. Successivamente, dovete creare un file con il nome del vostro **partial** anteponendovi un trattino basso (underscore). Tutto qui.
 
-The above code is the way we are used to do, but in this new Rails version, we'll do the same thing in a different way, like this:
+Il codice che abbiamo appena visto mostra come abbiamo sempre utilizzato i **partials**, ma in questa nuova versione di rails possiamo fare la stessa cosa, in modo diverso, come in:
 
 	<% form_for(@user) do |f| %>
 		<%= render :partial => f %>
 		<%= submit_tag 'Create' %>
 	<% end %>
 
-In this example we render the partial "users/\_form", which will receive a variable called "form" with the references created by the **FormBuilder**.
+In questo esempio verrà renderizzato un partial di nome "users/\_form", che riceverà una variabile chiamata "form" con tutte le referenze create dal **FormBuilder**.
 
-The old way will keep working.
+Naturalmente la vecchia modalità continuerà a funzionare.

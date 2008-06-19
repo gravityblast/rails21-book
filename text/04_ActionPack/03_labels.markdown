@@ -1,6 +1,6 @@
 ## Labels
 
-When creating a new form using **scaffold** it will be created with the following code:
+Quando viene creata una nuova form utilizzando uno **scaffold** verrà generato il seguente codice:
 
 	<% form_for(@post) do |f| %>
 	  <p>
@@ -16,7 +16,7 @@ When creating a new form using **scaffold** it will be created with the followin
 	  </p>
 	<% end %>
 
-That way makes much more sense. The **label** method was included. This method returns a *string* with the column title inside an HTML **\<label\>** tag.
+Questo appare molto più sensato. È stato aggiunto il metodo **label**, il quale restituisce una *stringa* con il titolo della colonna incluso in un tag HTML **\<label\>**.
 
 	>> f.label :title
 	=> <label for="post_title">Title</label>
@@ -27,11 +27,11 @@ That way makes much more sense. The **label** method was included. This method r
 	>> label :title, "A short title", :class => "title_label"
 	=> <label for="post_title" class="title_label">A short title</label>
 
-Did you notice the **for** parameter inside the tag ? "post\_title" is the textbox title which contains our post title. The **\<label\>** tag is in fact a label associated to the **post\_title** object. When someone clicks in the label (which isn't a link) the associated HTML controller receives focus.
+Vi siete accorti del parametro **for** all'interno del tag? "post\_title" è il titolo della textbox che contiene il titolo del nostro post. Infatti il tag **\<label\>** è associato all'oggetto **post\_title**. Quando cliccate sulla label (che non è un link) è l'oggetto HTML associato a riceve il focus.
 
-Robby Russell wrote an interesting post in his blog about this subject. You can read it on: [http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label](http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label)
+Robby Russell ha scritto un interessante post nel suo blog a riguardo. Potete leggerlo qui: [http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label](http://www.robbyonrails.com/articles/2007/12/02/that-checkbox-needs-a-label)
 
-It was also included the **label\_tag** method in **FormTagHelper**. This method works like label, but in a simpler way:
+Inoltre è stato incluso in **FormTagHelper** il metodo **label\_tag**. Questo metodo si comporta come label, ma più semplicemente:
 
 	>> label_tag 'name'
 	=> <label for="name">Name</label> 
@@ -42,10 +42,10 @@ It was also included the **label\_tag** method in **FormTagHelper**. This method
 	>> label_tag 'name', nil, :class => 'small_label'
 	=> <label for="name" class="small_label">Name</label>
 
-The method also accepts the **:for** option, Look an example:
+Il metodo accetta anche l'opzione *:for**, ad esempio:
 
 	label(:post, :title, nil, :for => "my_for")
 
-This will return something like this:
+che restituisce qualcosa del genere:
 
 	<label for="my_for">Title</label>
