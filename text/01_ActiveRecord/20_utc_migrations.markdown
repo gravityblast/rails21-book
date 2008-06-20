@@ -14,10 +14,6 @@ Inoltre, è stata introdotta una nova tabella chiamata **schema_migrations** che
 
 Apparentemente questo risolve il problema del conflitto nelle **migrations**.
 
-Esiste un'opzione per disabilitare questa feature, basta includere il seguente codice nel file **environment.rb**:
-
-	config.active_record.timestamped_migrations = false
-
 Ci sono anche nuovi task rake per "attraversare" le **migrations**:
 
 	rake db:migrate:up
