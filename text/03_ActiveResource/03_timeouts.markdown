@@ -1,6 +1,6 @@
 ## Timeout
 
-ActiveResource utilizza il protocollo **HTT** per accedere alle API RESTful, e a causa di ciò e suscettibile a problemi quali risposte lente da parte dei server oppure server non raggiungibili.
+ActiveResource utilizza il protocollo **HTTP** per accedere alle API RESTful, e a causa di ciò e suscettibile a problemi quali risposte lente da parte dei server oppure server non raggiungibili.
 In tali casi, le chiamate ad ActiveResource possono andare in timeout. Adesso è possibile controllare il tempo di timeout attraverso l'omonima proprietà:
 
 	class Person < ActiveResource::Base

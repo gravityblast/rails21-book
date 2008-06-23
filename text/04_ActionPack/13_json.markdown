@@ -1,10 +1,11 @@
 ## JSON
 
-Rails now accepts POST's requests of JSON content. For example, you can send a POST request this way:
+Rails ora accetta richieste POST con contenuto JSON. Per esempio, è possibile inviare una richiesta post in questo modo: 
 
 	POST /posts
 	{"post": {"title": "Breaking News"}}
 
+E tutto va nella variabile **params**. Per esempio:
 And everything goes to variable **params**. This works, for example:
 
 	def create
@@ -12,4 +13,4 @@ And everything goes to variable **params**. This works, for example:
 	  # …
 	end
 
-For those who doesn't know JSON is a "competitor" for XML, and it is widely used for JavaScript data interchange, because it's represented in this language. It takes its name from there: **JavaScript Object Notation**.
+Per quelli che non conoscono JSON, è un "concottente" dell'XML, ed è ampiamente utilizzato per lo scambio di dati JavaScript, perchè è rappresentato in questo linguaggio. Prende il nome da qui: **JavaScript Object Notation**.

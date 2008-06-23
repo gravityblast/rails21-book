@@ -1,7 +1,7 @@
 ## caches\_action accepts conditionals
 
-The **caches\_action** method now accepts the **:if** option, allowing the use of conditionals to specify when an **action** can be **cached**. For example:
+Il metodo **caches\_action** ora accetta l'opzione **:if**, permettendo l'uso di una condizione che specifica quando l'**azione** deve essere messa in **cache**. Per esempio:
 
 	caches_action :index, :if => Proc.new { |c| !c.request.format.json? }
 
-In the above example, the **action index** will go to the **cache** only if it's not accessed by a JSON request.
+Nell'esempio sopra, l'azione ** index** verrà messa in **cache** solo se non viene richiamata da una request di tipo JSON.

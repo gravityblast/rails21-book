@@ -1,7 +1,7 @@
 ## flash.now now works in tests
 
-Who didn't have headaches because of this ? The problem was that during tests we could never confirm if a message was stored in flash, because it was cleared by Rails before going to your test script.
+Chi non ha avuto mal di testa per questo ? Il problema era che durante i test non potevamo mai confermare se un messaggio era salvato in flash, perchè veniva cancellato da Rila prima di accedere al tuo test.
 
-In rails 2.1 the problem was solved. Now you can include lines like this in your tests:
+In rails 2.1 il problema è stato risolto. Ora è possibile includere codice come questo nei test:
 
 	assert_equal '>value_now<', flash['test_now']
